@@ -4,12 +4,23 @@
 
 package com.kitestart.reposapp.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 public class Repos {
 
+    @SerializedName("name")
+    @Expose
     private String name;
+
+    @SerializedName("description")
+    @Expose
     private String description;
+
+    @SerializedName("html_url")
+    @Expose
     private String html_url;
 
     public Repos(String name, String description, String html_url) {

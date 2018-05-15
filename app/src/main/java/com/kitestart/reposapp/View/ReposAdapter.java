@@ -41,18 +41,19 @@ public class ReposAdapter extends ArrayAdapter<Repos> {
 
         View itemView = convertView;
 
+
         if(itemView == null){
             itemView = LayoutInflater.from(context).inflate(R.layout.repos_item, parent, false);
         }
 
 
-        Repos repo = allRepos.get(position);
+        Repos one_repo = allRepos.get(position);
 
         TextView name = itemView.findViewById(R.id.nameTxt);
         TextView desc = itemView.findViewById(R.id.descTxt);
 
-        name.setText(repo.getName());
-        desc.setText(repo.getDescription());
+        name.setText(one_repo.getName());
+        desc.setText(one_repo.getDescription());
 
 
         return itemView;
